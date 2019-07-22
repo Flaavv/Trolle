@@ -1,0 +1,70 @@
+body {
+	background: #F8F8FF;
+}
+
+container {
+	width: 20px;
+}
+th, td, tr {
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	border-collapse: collapse;
+	margin: 20px;
+	padding: 25px;
+	width: 625px;
+}
+td, th {
+	text-align: center;
+}
+.barba {
+	color: white;
+	font-size: 1.4em;
+}
+.barba a {
+	color: white;
+}
+.barba a:hover {
+	background-color: grey;
+	color: white;
+	transition: all 1s ease-out;
+}
+.barba a {
+	padding: 15px;
+	width: 195px;
+	color: white;
+}
+.navbar-brand {
+	color: green;
+	width: 200px;
+	padding: 30px  :
+	margin: 20px  :
+
+}
+.nav-item, .nav-link a {
+	color: white;
+}
+.collapse-navbar-collapse a:hover {
+	color: white;
+}
+
+.ZeHead {
+	width: 83%;
+	text-align: center;
+}
+.ZeImage {
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	height: auto;
+}
+.ZeTitre {
+	width: 100%;
+}
+
+.ZeFormulaire {
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	text-align: center;
+}

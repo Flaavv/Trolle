@@ -1,0 +1,27 @@
+{% extends 'projmanager/base.html' %}
+
+<Title>{% block title %}Task details{% endblock %}</Title> <!-- nom de l'onglet dans navigateur-->
+
+{% block content %} 
+
+    <h1>{{task.title}}</h1><hr><br>
+    
+    <p> <em>Description :</em></p><hr>
+    <p> {{task.description}}</p><hr>
+    <p> <em>Priorité haute : </em>{{task.priority}} </p><hr>
+    <p> <em>Date de création : </em>{{task.starting_date}}</p><hr>
+    <p> <em>Echéance : </em>{{task.deadline}}</p><hr>
+    <p> <em>Status : </em>{{task.id_status}}</p><hr>
+    <p> <em>Projet : </em>{{task.id_project}}</p><hr>
+    <p> <em>Contributeur : </em>{{task.id_user}}</p><hr>
+    
+    <p><a href = "{% url "projmanager:informations" task.id %}">Voir les informations</a></p>
+    <p><a href = "{% url "projmanager:taskupdate" task.id %}">Modifier la tache</a></p>
+
+{% endblock %}
+
+
+
+
+
+

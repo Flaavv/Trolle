@@ -1,0 +1,32 @@
+{% extends 'projmanager/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+<link rel="stylesheet" href="{% static "main.css" %}" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<Title>{% block title %}Tasks update{% endblock %}</Title>  <!-- nom de l'onglet dans navigateur-->
+
+{% block content %}
+   
+    <form action="{% url "projmanager:taskupdate" task_id %}" method="post">
+        
+
+        {% csrf_token %}
+    <div class="row">
+      <div class="col-6">
+        {{ form.description|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.title|as_crispy_field }}
+      </div>
+    </div>
+    {{ form.starting_date|as_crispy_field }}
+    {{ form.deadline|as_crispy_field }}
+    {{ form.priority|as_crispy_field }}
+    {{ form.id_user|as_crispy_field }}
+    {{ form.id_status|as_crispy_field }}
+     {{ form.id_project|as_crispy_field }}
+
+        <button type="submit" value="Submit"class="btn btn-success">Submit</button>
+    </form>
+
+{% endblock %}

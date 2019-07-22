@@ -1,0 +1,13 @@
+{% extends 'projmanager/base.html' %}
+<Title>{% block title %}Tasks list{% endblock %}</Title>  <!-- nom de l'onglet dans navigateur-->
+
+{% block content %} 
+
+    <h1>{{ Infos.title }}</h1>
+    
+       <p>{% for info in Infos.information_set.all %}</p>
+            <h2>{{ info.title }}</h2>
+            <p>{{ info.description }}</p>
+        {% endfor %}
+    <p><a href = "{% url "projmanager:newinformation" %}">Ajouter une information</a></p>
+{% endblock %}

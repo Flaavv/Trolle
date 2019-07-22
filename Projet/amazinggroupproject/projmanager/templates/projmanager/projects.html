@@ -1,0 +1,34 @@
+{% extends 'projmanager/base.html' %}
+
+<Title>{% block title %}Troll@pp{% endblock %}</Title>  <!-- nom de l'onglet dans navigateur-->
+
+
+{% block content %} 
+
+
+    <h1>Liste des projets</h1><hr>
+    {% if title_list_project %}
+    	<div class="tabz">
+    	<table>
+    		<tr>
+    			<th>Nom du Projet</th>
+    			<th>Version</th><hr><br>
+    		</tr>
+    		{% for title in title_list_project %}
+    			<tr>
+    				<td><a href="{% url 'projmanager:tasks' title.id %}">{{ title.title }}</a></td>
+    			
+    				<td>{{ title.version }}</td>
+    				
+    					
+    			</tr>
+    		{% endfor %}
+    	</table>
+    	</div>    	
+       
+    {% else %}
+        <p>No titles are available.</p>
+    {% endif %}
+    
+{% endblock %}  
+    

@@ -1,0 +1,38 @@
+{% extends 'projmanager/base.html' %}
+<Title>{% block title %}Tasks list{% endblock %}</Title>  <!-- nom de l'onglet dans navigateur-->
+
+{% block content %} 
+
+    <h1>{{ zekey.title }}</h1><hr>
+    
+    <label><em>Description :</em></label>
+    <p>{{zekey.description}}</p><hr>
+    <p>Version : {{zekey.version}}</p>
+    <ul>
+        {% for task in zekey.task_set.all %}
+            <li><a href="{% url 'projmanager:taskdetail' task.id %}">{{ task.title }}</a></li>
+        {% endfor %}
+    </ul>
+    
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
